@@ -43,7 +43,7 @@ def play(board)
     puts "Sorry, it's a draw"
   else
 turn(board)
-  
+
   end
 end
 
