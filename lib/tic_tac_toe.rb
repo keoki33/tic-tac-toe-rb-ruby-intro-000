@@ -37,13 +37,11 @@ end
 
 # Define your play method below
 def play(board)
-  if won?(board)
+until won?(board)
     puts "Congratulation, #{winner(board)} is the winner"
   elsif draw?(board)
     puts "Sorry, it's a draw"
-  else
-turn(board)
-play(board)
+  elsif turn(board)
 
   end
 end
