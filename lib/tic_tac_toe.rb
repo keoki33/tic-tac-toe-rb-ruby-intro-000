@@ -43,6 +43,7 @@ if won?(board)
   elsif draw?(board)
     puts "Sorry, it's a draw"
   elsif play(board)
+end
 
   end
 end
