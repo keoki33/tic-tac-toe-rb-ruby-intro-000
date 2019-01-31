@@ -44,6 +44,8 @@ if won?(board)
     puts "Sorry, it's a draw"
   elsif play(board)
 end
+end
+
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
