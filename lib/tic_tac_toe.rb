@@ -37,15 +37,16 @@ end
 
 # Define your play method below
 def play(board)
-turn(board)
-if won?(board)
-    puts "Congratulation, #{winner(board)} is the winner"
-  elsif draw?(board)
-    puts "Sorry, it's a draw"
-  elsif play(board)
-end
-end
+  while !over?(board)
+    turn(board)
+  end
 
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cats Game!"
+  end
+end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
