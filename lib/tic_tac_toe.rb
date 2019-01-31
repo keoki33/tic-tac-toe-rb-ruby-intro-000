@@ -37,11 +37,14 @@ end
 
 # Define your play method below
 def play(board)
-  counter = 0
-  until counter == 9
-  turn(board)
-  counter += 1
-end
+  if won?(board)
+    puts "Congratulation, #{winner(board)} is the winner"
+  elsif draw?(board)
+    puts "Sorry, it's a draw"
+  else
+turn(board)
+  
+  end
 end
 
 def position_taken?(board, index)
